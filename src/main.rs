@@ -18,6 +18,7 @@ struct Args {
         default_values_t = [
             "/etc/ssh/ssh_config".to_string(),
             "~/.ssh/config".to_string(),
+            "~/.ssh/bastionAccess".to_string(),
         ],
     )]
     config: Vec<String>,
