@@ -32,6 +32,9 @@ strum = "0.26.1"
 strum_macros = "0.26.1"
 tui-input = "0.8.0"
 unicode-width = "0.1.11"
+reqwest = { version = "0.11", features = ["blocking"] }
+dirs = "4.0"
+
 
 [build-dependencies]
 winresource = "0.1.17"
