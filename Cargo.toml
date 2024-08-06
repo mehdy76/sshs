@@ -1,13 +1,13 @@
 [package]
-name = "sshs"
-version = "4.4.1"
+name = "sshsw"
+version = "4.4.2"
 edition = "2021"
-description = "Terminal user interface for SSH"
+description = "Terminal user interface for SSH - Wisper Connections"
 license = "MIT"
 authors = ["Nathanael Demacon"]
 
 [[bin]]
-name = "sshs"
+name = "sshsw"
 path = "src/main.rs"
 
 [profile.release]
@@ -32,3 +32,6 @@ strum = "0.26.1"
 strum_macros = "0.26.1"
 tui-input = "0.8.0"
 unicode-width = "0.1.11"
+
+[build-dependencies]
+winresource = "0.1.17"
