@@ -15,13 +15,13 @@ struct Args {
         short,
         long,
         num_args = 1..,
-        default_values_t = [
-            "/etc/ssh/ssh_config".to_string(),
-            "~/.ssh/config".to_string(),
-            "~/.ssh/bastionAccess".to_string(),
-        ],
+        default_values_t = [ "~/.ssh/wisperServers".to_string(), ]
     )]
     config: Vec<String>,
+
+    /// Shows `bastion`
+    #[arg(long, default_value_t = false)]
+    show_bastion: bool,
 
     /// Shows `ProxyCommand`
     #[arg(long, default_value_t = false)]
@@ -36,7 +36,7 @@ struct Args {
     sort: bool,
 
     /// Handlebars template of the command to execute
-    #[arg(short, long, default_value = "ssh \"{{{name}}}\"")]
+    #[arg(short, long, default_value = "ssh -t SECURED_BASTION \"{{user}}\"@\"{{{destination}}}\"")]
     template: String,
 
     /// Exit after ending the SSH session
